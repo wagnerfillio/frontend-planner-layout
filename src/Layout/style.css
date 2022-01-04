@@ -1,0 +1,126 @@
+:root {
+    --main-bg-color: #404bb3;
+    --main-color: #fff;
+}
+
+header, footer {
+    border: none;
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
+}
+
+header {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    z-index: 1;    
+    box-shadow: 0 1px 4px rgb(0 0 0 / 30%);
+	
+	border-bottom: 1px solid #000;
+}
+
+main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: calc(100vh - 3rem);
+    z-index: 0;
+}
+
+aside {	
+    background-color: #fff;
+    color: #fff;
+    z-index: 9000;
+    min-width: 15.625rem;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+	
+	border-right: 1px solid #000;
+}
+
+nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+article {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+section {
+    background: #f7f7f7;    
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 15px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+footer {
+    font-size: 80%;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 3rem;
+    flex: 0 1 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+	
+	border-top: 1px solid #000;
+}
+
+@media (min-width: 768px) {
+    header {
+		height: 3.5rem;
+	}
+	main {
+        height: calc(100vh - 6.5rem);
+    }
+	aside {
+		position: relative;
+	}
+	article {
+		-webkit-transition: all 0.2s ease-in-out;
+		transition: all 0.2s ease-in-out;
+		width: calc(100vw - 15.625rem);
+	}
+	footer {
+		height: 3rem;
+        padding: 0 1rem;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+    }
+}
